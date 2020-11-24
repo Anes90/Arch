@@ -22,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="?selectableItemBackground"
-        android:onClick="@{() -> listener.onProfileClick(item.profile)}">
+        android:onClick="@{() -> listener.onProfileClick(item.profile)}"><!-- Poziva funkciju koja je override-ana u MainFragment.kt, u ovom slucaju
+                                                                              uklanja kliknuti profil -->
 
         <TextView
             android:id="@+id/tv_id"

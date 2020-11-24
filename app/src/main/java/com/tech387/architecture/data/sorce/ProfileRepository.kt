@@ -13,11 +13,11 @@ class ProfileRepository {
     )
 
     fun getProfiles(): List<Profile> {
-        return profiles
+        return profiles //Vraca listu profila iz ovog repozitorija
     }
 
     fun removeProfile(profile: Profile) {
-        profiles.remove(profile)
+        profiles.remove(profile) //Funkcija za uklanjanje profila iz liste
     }
 
 }

@@ -24,7 +24,7 @@ class MainFragment : BaseFragment(), MainListener {
             lifecycleOwner = viewLifecycleOwner
         }
 
-        binding.viewModel?.getProfiles()
+        binding.viewModel?.getProfiles() //Dobavlja profile iz repozitorija preko viewModela
 
         return binding.root
     }
@@ -36,11 +36,11 @@ class MainFragment : BaseFragment(), MainListener {
     }
 
     private fun setupAdapter() {
-        binding.list.adapter = ListItemAdapter(requireContext(), this)
+        binding.list.adapter = ListItemAdapter(requireContext(), this) //Prosljedje ListItemAdapter u RecyclerView MainFragmenta
     }
 
     override fun onProfileClick(profile: Profile) {
-        binding.viewModel?.removeProfile(profile)
+        binding.viewModel?.removeProfile(profile) //Uklanja profil (implementirano u MainViewModel)
 
         Toast.makeText(requireContext(), "Profile Removed: ${profile.name}", Toast.LENGTH_SHORT).show()
     }

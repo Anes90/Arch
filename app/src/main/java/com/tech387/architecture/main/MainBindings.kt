@@ -14,16 +14,17 @@ object MainBindings {
     fun RecyclerView.bindMainProfiles(profiles: List<Profile>?) {
         Log.e("Prf", "${profiles?.size}")
 
-        if (!profiles.isNullOrEmpty()) {
-            val profileItems = mutableListOf<ListItem>()
+        if (!profiles.isNullOrEmpty()) { //Ako lista profiles nije prazna
+            val profileItems = mutableListOf<ListItem>() //kreira izmjenjivu listu ListItem-a
 
             profiles.forEach { p ->
-                profileItems.add(MainItem(p))
+                profileItems.add(MainItem(p)) //Za svaki profil dodaje MainItem u listu profileItems. MainItem je objekat koji nasljedjuje ListItem i
+                                              //provjerava da li su proslijedjeni i postojeci ListItem-i isti i da li su im sadrzaji isti
             }
 
-            bindListItems(profileItems)
+            bindListItems(profileItems) //dodjeljuje listu profileItems adapteru
         } else {
-            bindListItems(listOf())
+            bindListItems(listOf()) //ako je lista profiles prazna, dodjeljuje praznu listu adapteru
         }
     }
 
