@@ -18,10 +18,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) { 
     }
 
     fun removeProfile(profile: Profile) {
-        profileRepository.removeProfile(profile) //Uklanja profil iz repozitorija
+        profileRepository.removeProfile(profile) //Uklanja profil iz recyclerview-a
 
         profiles.value = profileRepository.getProfiles() //Dohvata novu listu profila iz repozitorija (izmijenjenu nakon uklanjanja jednog profila
                                                          //dodijeljuje izmjenjivoj listi koja je inicijalizovana u ovom ViewModelu
     }
+
+    // Added by Anes -----------------------------------
+    fun filterProfile(enteredText: String){
+        profiles.value = profileRepository.filterProfile(enteredText)
+    }
+    // Added by Anes -----------------------------------
 
 }

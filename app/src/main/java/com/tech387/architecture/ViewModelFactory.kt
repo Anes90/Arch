@@ -21,7 +21,7 @@ class ViewModelFactory constructor(
         handle: SavedStateHandle
     ) = with(modelClass) {
         when {
-            isAssignableFrom(MainViewModel::class.java) ->
+            isAssignableFrom(MainViewModel::class.java) -> //kopirati
                 MainViewModel(application)
             else ->
                 throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
