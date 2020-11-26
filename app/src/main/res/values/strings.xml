@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Architecture</string>
-    <string name="search">Search</string>
+    <string name="search">Search from Activity</string>
 </resources>

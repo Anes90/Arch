@@ -20,10 +20,9 @@
         android:importantForAutofill="no"
         android:inputType="text"
         android:labelFor="@id/search_list"
-        tools:text="Search"
+        tools:text="Search from Activity"
         android:layout_margin="24dp"
-        android:focusedByDefault="false"
-        tools:targetApi="o" />
+        android:focusedByDefault="false"/>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frag_search"
